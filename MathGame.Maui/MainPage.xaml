@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MathGame.Maui.MainPage"
+             BackgroundImageSource="bg.jpg">
+
+
+    <ContentView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="50"
+            >
+            <Label
+                Text="This is your Math game"
+                FontSize="50"
+                HorizontalOptions="Center"/>
+            <Label
+                Text="What game would you like to play?"
+                FontSize="50"
+                HorizontalOptions="Center"/>
+
+            <Grid RowDefinitions="*,150"
+                  ColumnDefinitions="*,*,*,*"
+                  >
+
+                <Button Grid.Column="0"
+                        Text="+"
+                        Clicked="OnGameChosen"
+                        MaximumWidthRequest="100"
+                        FontSize="60"/>
+                <Button Grid.Column="1"
+                        Text="-"
+                        Clicked="OnGameChosen"
+                        MaximumWidthRequest="100"
+                        FontSize="60"/>
+                <Button Grid.Column="2"
+                        Text="x"
+                        Clicked="OnGameChosen"
+                        MaximumWidthRequest="100"
+                        FontSize="60"/>
+                <Button Grid.Column="3"
+                        Text="/"
+                        Clicked="OnGameChosen"
+                        MaximumWidthRequest="100"
+                        FontSize="60"/>
+                <Button Grid.Row="1"
+                        Grid.ColumnSpan="4"
+                        BackgroundColor="ForestGreen"
+                        Text="View Previous games"
+                        Clicked="OnViewPreviousGamesChosen"
+                        FontSize="32"
+                        MaximumHeightRequest="70"
+                        MaximumWidthRequest="500"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ContentView>
+  
+</ContentPage>
